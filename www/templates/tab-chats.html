@@ -1,0 +1,25 @@
+<ion-view view-title="Chats">
+  <ion-content>
+    <div class="header-quick-act">
+        <!--<div class="back-button">
+         <img src="../img/Assets/Global/Back-arrow.png"/>
+        </div> -->
+        <div class="header-logo">
+          <!--<img src="../img/Assets/Logo_Header.png"/>-->
+        </div>
+    </div>
+    <div class="question-bar">
+      <p>Which sector would you like to go in?</p>
+    </div>
+      <ion-list>
+        <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="area in areas"  href="#/tab/second">
+          <div style="background-color: {{area.colour}} " class="inner-item">
+            <span class="area-number">{{area.id}} |</span>
+            <span class="area-image"><img src="{{area.face}}"/></span>
+            <span class="area-category">{{area.name}}</span>
+            <i class="icon ion-chevron-right icon-accessory"></i>
+         </div>
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>

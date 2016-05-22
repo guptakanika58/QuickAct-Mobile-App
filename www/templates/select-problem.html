@@ -1,0 +1,54 @@
+<ion-view view-title="second">
+  <ion-content>
+    <div class="header-quick-act">
+        <!--<div class="back-button">
+         <img src="../img/Assets/Global/Back-arrow.png"/>
+        </div> -->
+        <div class="header-logo">
+          <!--<img src="../img/Assets/Logo_Header.png"/>-->
+        </div>
+    </div>
+    <div class="question-bar">
+      <p>Which is the problem with your product?</p>
+    </div>
+    <div class="breadcrumb">
+      <span class="breadcrumb-area">
+        <a href="#/tab/chats">03 Cosmetics</a> 
+      </span> 
+      <span>></span>
+      <span class="breadcrumb-area">
+         <a href="#/tab/second">Lodge Complaint</a> 
+      </span>
+      <span>></span>
+      <span class="breadcrumb-selected">
+        Select Problem
+      </span>  
+    </div>
+    <ion-list>
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right  " ng-repeat="prob in problems"  >
+      <div style="background-color: {{prob.colour}} " class="inner-problem">
+          
+            <span class="area-image"><img src="{{prob.face}}"/></span>
+            <span class="area-category">{{prob.name}}</span>
+            <span class="problem-checkbox check" id="check-{{prob.id}}" ng-click="select('check-{{prob.id}}')"></span>
+            <span class="problem-checkbox2 check" id="check-{{prob.id}}-2" ng-click="select('check-{{prob.id}}-2')"></span>
+            <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+        </div>
+      </ion-item>
+
+
+
+    </ion-list>
+
+    <div class="button-bar">
+      <a href="#/tab/second" class="button">Cancel</a>
+      <span class="button-separator">|</span>
+      <button class="button" ng-click="navigate()" ng-disabled="notchecked">Ok</button>
+    </div>
+  </ion-content>
+</ion-view>

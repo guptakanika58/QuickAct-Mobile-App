@@ -1,0 +1,112 @@
+<ion-view view-title="second">
+  <ion-content>
+    <div class="header-quick-act">
+        <!--<div class="back-button">
+         <img src="../img/Assets/Global/Back-arrow.png"/>
+        </div> -->
+        <div class="header-logo">
+          <!--<img src="../img/Assets/Logo_Header.png"/>-->
+        </div>
+    </div>
+    <div class="question-bar">
+      <p>Which is the problem with your product?</p>
+    </div>
+    <div class="breadcrumb">
+      <span class="breadcrumb-area">
+        <a href="#/tab/chats">03 Cosmetics</a> 
+      </span> 
+      <span>></span>
+      <span class="breadcrumb-area">
+        <a href="#/tab/second">Lodge Complaint</a> 
+      </span>
+      <span>&gt;</span>
+      <span class="breadcrumb-area">
+        <a href="#/tab/problem">Select Problem</a> 
+         
+      </span>
+      <span>&gt;</span>
+      <span class="breadcrumb-selected">
+        Add Proof
+      </span> 
+    </div>
+    <ion-list>
+
+      <ion-item class="item-remove-animate item-avatar item-icon-right  " ng-repeat="(key, proof) in proofs"  >
+      <div style="background-color: {{proof.colour}} " class="inner-problem">
+          
+            <span class="area-image"><img src="{{proof.face}}"/></span>
+            <span class="area-category">{{proof.name}}</span>
+            <span class="problem-checkbox check" id="check2-{{proof.id}}" ng-click="select('check2-{{proof.id}}',{{key}})"></span>
+            <span class="problem-checkbox2 check" id="check2-{{proof.id}}-2" ng-click="select('check2-{{proof.id}}-2')"></span>
+            <div ng-if="key == 2  && thrdcheck" class="add-picture">
+              <div class="add-picture-1">
+                <span class="picture_of">Picture of</span>
+                <p class="product">Product</p>
+                <div class="touch-to-capture">
+                <div class="camera-image-hidden hide" id="camera-image-hidden"><img src="../img/Assets/4_AddProof/img_3192.png"/></div>
+                  <div class="camera-image" id="camera-image" ng-click="camera()"><img src="../img/Assets/4_AddProof/4.png"/></div>
+
+                  <p class="capture">Touch to Capture</p>
+
+                </div>
+                <div class="edit-delete">
+                    <span class="edit-picture"><img src="../img/Assets/4_AddProof/5.png"/></span>
+                    <span class="">|</span>
+                    <span class="delete-picture"><img src="../img/Assets/4_AddProof/6.png"/></span>
+
+                </div>
+              </div>
+              <div class="add-picture-2">
+                
+                <span class="picture_of">Picture of</span>
+                <p class="product">Product</p>
+                <div class="touch-to-capture">
+                  <div class="camera-image"><img src="../img/Assets/4_AddProof/4.png"/></div>
+                  <p>Touch to Capture</p>
+
+                </div>
+                <div class="edit-delete">
+                    <span class="edit-picture"><img src="../img/Assets/4_AddProof/5.png"/></span>
+                    <span class="">|</span>
+                    <span class="delete-picture"><img src="../img/Assets/4_AddProof/6.png"/></span>
+
+                </div>
+              </div>
+              <div class="clear"></div>
+
+            </div>
+            <!--<i class="icon ion-chevron-right icon-accessory"></i>-->
+
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+        </div>
+      </ion-item>
+
+
+
+    </ion-list>
+
+    <div class="button-bar send-button">
+      <a href="#/tab/problem" class="button">Cancel</a>
+      <span class="button-separator">|</span>
+      <a class="button" ng-click="openPopover($event)" ng-disabled="isDisable">Send</a>
+    </div>
+
+    <script id="my-popover.html" type="text/ng-template">
+  <ion-popover-view>
+    <ion-header-bar>
+      <h1 class="title">Complaint Registered!</h1>
+    </ion-header-bar>
+    <ion-content>
+      <p>You are the 1030 member of lodge complaint!</p>
+      <p>Your Reference ID is C1030</p>
+      <p>We will contact you with in 7days of registration.</p>
+      <p>For more information please visit www.quickact.com</p>
+    </ion-content>
+  </ion-popover-view>
+</script>
+
+
+  </ion-content>
+</ion-view>
