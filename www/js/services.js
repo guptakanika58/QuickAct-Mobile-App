@@ -3,7 +3,7 @@ angular.module('starter.services', [])
 .factory('Area', function() {
   // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
+  // Data For prototype.. In the complete app, This data will be called from REST API from node js server
   var areas = [{
     id: "01",
     name: 'Airlines',
@@ -79,9 +79,7 @@ angular.module('starter.services', [])
 })
 
 .factory('Activity', function() {
-  // Might use a resource here that returns a JSON array
-
-  // Some fake testing data
+ 
   var activities = [{
     id: "01",
     name: 'Lodge Complaint',
@@ -155,7 +153,7 @@ angular.module('starter.services', [])
     face: '../img/Assets/3_SelectProblem/4.png',
     colour:'#01dde4'
   }, {
-    id: "04",
+    id: "05",
     name: 'Others',
     lastText: 'Emergency Diagnosis Tips',
     face: '../img/Assets/3_SelectProblem/5.png',
@@ -183,7 +181,7 @@ angular.module('starter.services', [])
 .factory('Proof', function() {
   // Might use a resource here that returns a JSON array
 
-  // Some fake testing data
+
   var proofs = [{
     id: "01",
     name: 'Type in Description',

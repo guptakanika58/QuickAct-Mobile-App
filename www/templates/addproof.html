@@ -32,9 +32,9 @@
     <ion-list>
 
       <ion-item class="item-remove-animate item-avatar item-icon-right  " ng-repeat="(key, proof) in proofs"  >
-      <div style="background-color: {{proof.colour}} " class="inner-problem">
-          
-            <span class="area-image"><img src="{{proof.face}}"/></span>
+      <div style="background-color: {{proof.colour}} " class="inner-proof">
+			<div class="inner-proof-container proof-space">
+            <span class="area-image area-image-{{proof.id}}"></span>
             <span class="area-category">{{proof.name}}</span>
             <span class="problem-checkbox check" id="check2-{{proof.id}}" ng-click="select('check2-{{proof.id}}',{{key}})"></span>
             <span class="problem-checkbox2 check" id="check2-{{proof.id}}-2" ng-click="select('check2-{{proof.id}}-2')"></span>
@@ -81,6 +81,7 @@
           Delete
         </ion-option-button>
         </div>
+		</div>
       </ion-item>
 
 

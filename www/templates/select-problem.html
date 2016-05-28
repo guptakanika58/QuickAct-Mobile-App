@@ -29,7 +29,7 @@
       <ion-item class="item-remove-animate item-avatar item-icon-right  " ng-repeat="prob in problems"  >
       <div style="background-color: {{prob.colour}} " class="inner-problem">
           
-            <span class="area-image"><img src="{{prob.face}}"/></span>
+            <span class="area-image area-image-{{prob.id}}"></span>
             <span class="area-category">{{prob.name}}</span>
             <span class="problem-checkbox check" id="check-{{prob.id}}" ng-click="select('check-{{prob.id}}')"></span>
             <span class="problem-checkbox2 check" id="check-{{prob.id}}-2" ng-click="select('check-{{prob.id}}-2')"></span>

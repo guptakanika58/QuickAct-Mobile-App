@@ -25,8 +25,8 @@
       <ion-item class="item-remove-animate item-avatar item-icon-right  " ng-repeat="act in activities"  href="#/tab/problem">
         <div style="background-color: {{act.colour}} " class="inner-activity">
           <div class="inner-activity-container">
-            <span class="area-number">{{act.id}} |</span>
-            <span class="area-image"><img src="{{act.face}}"/></span>
+            <span class="area-number">{{act.id}}</span>
+            <span class="area-image area-image-{{act.id}}"></span>
             <span class="area-category">{{act.name}}</span>
           
             <i class="icon ion-chevron-right icon-accessory"></i>

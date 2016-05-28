@@ -14,11 +14,13 @@
       <ion-list>
         <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="area in areas"  href="#/tab/second">
           <div style="background-color: {{area.colour}} " class="inner-item">
-            <span class="area-number">{{area.id}} |</span>
-            <span class="area-image"><img src="{{area.face}}"/></span>
-            <span class="area-category">{{area.name}}</span>
-            <i class="icon ion-chevron-right icon-accessory"></i>
-         </div>
+			  <div class="sector-container">
+				<span class="area-number">{{area.id}}</span>
+				<span class="area-image area-image-{{area.id}}"></span>
+				<span class="area-category">{{area.name}}</span>
+				<i class="icon ion-chevron-right icon-accessory"></i>
+			 </div>
+		</div>
         </ion-item>
       </ion-list>
   </ion-content>
