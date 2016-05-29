@@ -8595,13 +8595,7 @@ progress {
   .button.active, .button.activated {
     border-color: #a2a2a2;
     background-color: #e5e5e5; }
-  .button:after {
-    position: absolute;
-    top: -6px;
-    right: -6px;
-    bottom: -6px;
-    left: -6px;
-    content: ' '; }
+  
   .button .icon {
     vertical-align: top;
     pointer-events: none; }
